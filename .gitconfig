@@ -1,0 +1,27 @@
+[user]
+	name = Takeshi YAEDA
+	email = Takeshi.Yaeda@jp.sony.com
+[color]
+	ui = auto
+[core]
+	autocrlf = input
+	pager = less -r
+	editor = emacs -nw
+[alias]
+	st = status -sb
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	di = diff -w
+	br = branch -a
+	co = checkout
+	dm = diff master
+	df = diff -w
+	su = submodule update
+	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
+[branch]
+	autosetuprebase = always
+[merge]
+	ff = false
+[pull]
+	rebase = true
+[push]
+	default = upstream

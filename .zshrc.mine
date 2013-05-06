@@ -1,0 +1,10 @@
+#
+# for MacOS
+#
+alias emacs='$HOME/Applications/Emacs.app/Contents/MacOS/Emacs'
+
+#
+# Ruby
+#
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
