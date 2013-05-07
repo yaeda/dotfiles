@@ -1,12 +1,13 @@
 [user]
 	name = Takeshi YAEDA
-	email = Takeshi.Yaeda@jp.sony.com
+	email = t.yaeda@gmail.com
 [color]
 	ui = auto
 [core]
 	autocrlf = input
 	pager = less -r
 	editor = emacs -nw
+	excludesfile = ~/.gitignore
 [alias]
 	st = status -sb
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
