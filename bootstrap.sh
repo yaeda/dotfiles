@@ -26,7 +26,7 @@ ln -fs $HOME/dotfiles/emacs/inits   $HOME/.emacs.d/inits
 #
 # other dotfiles
 #
-for dotfile in $HOME/dotfiles/.*
+for dotfile in [.tmux.conf .giconfig]
 do
-    ln -fs $dotfile $HOME/${dotfile:t}
+    ln -fs $HOME/dotfiles/$dotfile $HOME/$dotfile
 done
