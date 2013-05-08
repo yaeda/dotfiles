@@ -5,7 +5,8 @@
 # clone
 if [ ! -d $HOME/.zprezto ]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    echo "[ -f $HOME/dotfiles/zsh/.zshrc.mine ] && source $HOME/dotfiles/zsh/.zshrc.mine" >> "${ZDOTDIR:-$HOME}/.zshrc"
+    echo "[ -f $HOME/dotfiles/zsh/.zshrc.mine.`uname` ] && source $HOME/dotfiles/zsh/.zshrc.mine.`uname`" >> "${ZDOTDIR:-$HOME}/.zshrc"
+    echo "[ -f $HOME/.zshrc.mine.Local ] && source $HOME/.zshrc.mine.Local" >> "${ZDOTDIR:-$HOME}/.zshrc"
 fi
 
 # copy zsh configuration files
