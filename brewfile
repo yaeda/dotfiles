@@ -1,0 +1,24 @@
+tap phinze/homebrew-cask || true
+tap homebrew/versions || true
+tap caskroom/versions || true
+update || true
+
+install brew-cask || true
+install git || true
+install tmux || true
+install zsh || true
+install wget || true
+install curl || true
+install ruby-build || true
+install rbenv || true
+
+install emacs --cocoa --HEAD --use-git-head || true
+
+cask install keyremap4macbook || true
+cask install pckeyboardhack || true
+cask install dropbox || true
+cask install skype || true
+cask install google-chrome-canary || true
+cask install sublime-text || true
+cask install yorufukurou || true
+cask install flip4mac || true
