@@ -18,10 +18,17 @@ done
 # custom setting
 ln -fs $HOME/dotfiles/zsh/zpreztorc $HOME/.zpreztorc
 
+#
+# Tmux
+#
+mkdir -p $HOME/.tmux
+git clone git://github.com/erikw/tmux-powerline.git $HOME/.tmux/tmux-powerline
+
 
 #
 # Emacs
 #
+brew install emacs --cocoa --HEAD --use-git-head
 ln -fs  $HOME/dotfiles/emacs/init.el $HOME/.emacs.d/init.el
 ln -nfs $HOME/dotfiles/emacs/inits   $HOME/.emacs.d/inits
 
