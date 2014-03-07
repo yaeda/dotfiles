@@ -1,6 +1,7 @@
 tap phinze/homebrew-cask || true
 tap homebrew/versions || true
 tap caskroom/versions || true
+tap yukidarake/homebrew-793 || true
 update || true
 
 install brew-cask || true
@@ -14,11 +15,22 @@ install rbenv || true
 
 install emacs --cocoa --HEAD --use-git-head || true
 
+# tmux powerline
+tap homebrew/dupes
+install homebrew/dupes/grep
+
+# other applications
 cask install keyremap4macbook || true
 cask install pckeyboardhack || true
+cask install virtualbox || true
+cask install vagrant || true
 cask install dropbox || true
 cask install skype || true
-cask install google-chrome-canary || true
 cask install sublime-text || true
 cask install yorufukurou || true
 cask install flip4mac || true
+cask install divvy || true
+cask install google-chrome-canary || true
+cask install google-japanese-input || true
+
+brew linkapps

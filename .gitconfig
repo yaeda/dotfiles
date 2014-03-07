@@ -1,6 +1,6 @@
 [user]
-	name = Takeshi YAEDA
-	email = t.yaeda@gmail.com
+	name = SET_ME_LOCALLY
+	email = SET_ME_LOCALLY
 [color]
 	ui = auto
 [core]
@@ -26,3 +26,7 @@
 	rebase = true
 [push]
 	default = upstream
+[init]
+	templatedir = ~/.git_template
+[url "http://"]
+	insteadOf = git://
