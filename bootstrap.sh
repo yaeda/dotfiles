@@ -1,8 +1,12 @@
+#!/bin/bash
+
 #
-# Homebrew
+# Homebrew (MacOS)
 #
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-brew bundle
+if [ `uname` = "Darwin" ]; then
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  brew bundle
+fi
 
 
 #
@@ -68,5 +72,7 @@ ln -fs $HOME/dotfiles/pre-comit $HOME/.git_template/hooks/pre-comit
 #
 
 # Ricty for powerline
-brew tap sanemat/font
-brew install --powerline --vim-powerline ricty
+if [ `uname` = "Darwin" ]; then
+  brew tap sanemat/font
+  brew install --powerline --vim-powerline ricty
+fi
