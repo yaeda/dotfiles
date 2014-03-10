@@ -4,6 +4,7 @@
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew bundle
 
+
 #
 # zsh (prezto)
 #
@@ -11,9 +12,6 @@ brew bundle
 # clone
 if [ ! -d $HOME/.zprezto ]; then
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-    echo "[ -f $HOME/dotfiles/zsh/.zshrc.mine.`uname` ] && source $HOME/dotfiles/zsh/.zshrc.mine.`uname`" >> "${ZDOTDIR:-$HOME}/.zshrc"
-    echo "[ -f $HOME/dotfiles/zsh/.zshrc.mine.Common ] && source $HOME/dotfiles/zsh/.zshrc.mine.Common" >> "${ZDOTDIR:-$HOME}/.zshrc"
-    echo "[ -f $HOME/.zshrc.mine.Local ] && source $HOME/.zshrc.mine.Local" >> "${ZDOTDIR:-$HOME}/.zshrc"
 fi
 
 # copy zsh configuration files
@@ -23,6 +21,9 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
 done
 
 # custom setting
+echo "[ -f $HOME/dotfiles/zsh/.zshrc.mine.Common ] && source $HOME/dotfiles/zsh/.zshrc.mine.Common" >> "${ZDOTDIR:-$HOME}/.zshrc"
+echo "[ -f $HOME/dotfiles/zsh/.zshrc.mine.`uname` ] && source $HOME/dotfiles/zsh/.zshrc.mine.`uname`" >> "${ZDOTDIR:-$HOME}/.zshrc"
+echo "[ -f $HOME/.zshrc.mine.Local ] && source $HOME/.zshrc.mine.Local" >> "${ZDOTDIR:-$HOME}/.zshrc"
 ln -fs $HOME/dotfiles/zsh/zpreztorc $HOME/.zpreztorc
 
 #
@@ -36,6 +37,7 @@ git clone git://github.com/erikw/tmux-powerline.git $HOME/.tmux/tmux-powerline
 # Emacs
 #
 #brew install emacs --cocoa --HEAD --use-git-head
+mkdir -p $HOME/.emacs.d
 ln -fs  $HOME/dotfiles/emacs/init.el $HOME/.emacs.d/init.el
 ln -nfs $HOME/dotfiles/emacs/inits   $HOME/.emacs.d/inits
 
