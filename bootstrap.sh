@@ -43,10 +43,22 @@ ln -nfs $HOME/dotfiles/emacs/inits   $HOME/.emacs.d/inits
 #
 # other dotfiles
 #
-for dotfile in .tmux.conf .gitconfig .tmux-powerlinerc
+for dotfile in .tmux.conf .gitconfig .tmux-powerlinerc .gemrc
 do
     ln -fs $HOME/dotfiles/$dotfile $HOME/$dotfile
 done
+
+
+#
+# Git
+#
+git config user.name "Takeshi YAEDA"
+git config user.email t.yaeda@gmail.com
+
+# pre-comit
+mkdir $HOME/.git_template/hooks
+chmod a+x $HOME/dotfiles/pre-comit
+ln -fs $HOME/dotfiles/pre-comit $HOME/.git_template/hooks/pre-comit
 
 
 #
