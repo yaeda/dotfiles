@@ -63,8 +63,8 @@ git config user.email t.yaeda@gmail.com
 
 # pre-comit
 mkdir $HOME/.git_template/hooks
-chmod a+x $HOME/dotfiles/pre-comit
-ln -fs $HOME/dotfiles/pre-comit $HOME/.git_template/hooks/pre-comit
+chmod a+x $HOME/dotfiles/pre-commit
+ln -fs $HOME/dotfiles/pre-commit $HOME/.git_template/hooks/pre-commit
 
 
 #
