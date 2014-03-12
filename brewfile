@@ -29,7 +29,7 @@ cask install skype || true
 cask install sublime-text || true
 cask install yorufukurou || true
 cask install flip4mac || true
-cask install divvy || true
+#cask install divvy || true # install from AppStore
 cask install google-chrome-canary || true
 cask install google-japanese-input || true
 
