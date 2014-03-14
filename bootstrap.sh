@@ -68,6 +68,12 @@ ln -fs $HOME/dotfiles/pre-commit $HOME/.git_template/hooks/pre-commit
 
 
 #
+# Atom
+#
+ln -fs $HOME/dotfiles/atom $HOME/.atom
+
+
+#
 # PCKeyboardHack setting
 #
 if [ `uname` = "Darwin" ]; then
