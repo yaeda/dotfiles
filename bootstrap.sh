@@ -82,5 +82,5 @@ fi
 # Ricty for powerline
 if [ `uname` = "Darwin" ]; then
   brew tap sanemat/font
-  brew install --powerline --vim-powerline ricty
+  brew install --powerline --vim-powerline --dz ricty
 fi
