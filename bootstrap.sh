@@ -68,6 +68,14 @@ ln -fs $HOME/dotfiles/pre-commit $HOME/.git_template/hooks/pre-commit
 
 
 #
+# PCKeyboardHack setting
+#
+if [ `uname` = "Darwin" ]; then
+  sh $HOME/dotfiles/pckeyboardhack-import.sh
+fi
+
+
+#
 # Font
 #
 
