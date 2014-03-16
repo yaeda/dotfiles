@@ -1,7 +1,7 @@
 'exception-reporting':
   'userId': '5da2e363-f7a0-eebd-d6e6-6080129818f9'
 'release-notes':
-  'viewedVersion': '0.71.0'
+  'viewedVersion': '0.73.0'
 'welcome':
   'showOnStartup': false
 'metrics':
@@ -19,3 +19,4 @@
     '.svn'
     '.DS_Store'
   ]
+'tree-view': {}
