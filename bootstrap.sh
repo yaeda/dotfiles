@@ -62,7 +62,7 @@ git config user.name "Takeshi YAEDA"
 git config user.email t.yaeda@gmail.com
 
 # pre-comit
-mkdir $HOME/.git_template/hooks
+mkdir -p $HOME/.git_template/hooks
 chmod a+x $HOME/dotfiles/pre-commit
 ln -fs $HOME/dotfiles/pre-commit $HOME/.git_template/hooks/pre-commit
 
