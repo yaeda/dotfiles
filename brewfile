@@ -10,6 +10,7 @@ install tmux || true
 install zsh || true
 install wget || true
 install curl || true
+install fasd || true
 install ruby-build || true
 install rbenv || true
 
