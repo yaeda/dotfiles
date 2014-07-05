@@ -11,10 +11,18 @@ install zsh || true
 install wget || true
 install curl || true
 install fasd || true
-install ruby-build || true
-install rbenv || true
 
-install emacs --cocoa --HEAD --use-git-head || true
+# python
+install pyenv || true
+install pyenv-virtualenv || true
+
+# ruby
+install rbenv || true
+install ruby-build || true
+install rbenv-gemset || true
+install rbenv-gem-rehash || true
+
+# install emacs --cocoa --HEAD --use-git-head || true
 
 # tmux powerline
 tap homebrew/dupes
