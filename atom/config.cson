@@ -1,12 +1,15 @@
 'exception-reporting':
-  'userId': '5da2e363-f7a0-eebd-d6e6-6080129818f9'
+  'userId': '01593a1b-f2d9-836e-3c42-ee6ff4f53aa4'
 'release-notes':
-  'viewedVersion': '0.73.0'
+  'viewedVersion': '0.83.0'
 'welcome':
   'showOnStartup': false
 'metrics':
-  'userId': 'c62156c1b247f313720520c413d82b59c92c5ee8'
+  'userId': '387459e5204d9134b3271e58ef10cc72f8fbb6b9'
 'editor':
+  'showIndentGuide': true
+  'normalizeIndentOnPaste': false
+  'fontSize': 17
   'fontFamily': 'Ricty'
 'core':
   'themes': [
@@ -18,4 +21,5 @@
     '.svn'
     '.DS_Store'
   ]
-'tree-view': {}
+'autocomplete-plus':
+  'fileBlacklist': '.*'
