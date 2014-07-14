@@ -21,5 +21,6 @@
     '.svn'
     '.DS_Store'
   ]
+  'useReactEditor': true
 'autocomplete-plus':
   'fileBlacklist': '.*'
