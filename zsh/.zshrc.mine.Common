@@ -4,7 +4,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 # alias
 alias usegmail='git config user.name "Takeshi YAEDA"; git config user.email t.yaeda@gmail.com'
 alias unproxy='unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY'
-
+alias bower='noglob bower'
 
 ###-begin-npm-completion-###
 #
