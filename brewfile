@@ -41,5 +41,6 @@ cask install flip4mac || true
 #cask install divvy || true # install from AppStore
 cask install google-chrome-canary || true
 cask install google-japanese-input || true
+cask install caffeine
 
 brew linkapps
