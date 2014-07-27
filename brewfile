@@ -1,6 +1,6 @@
-tap phinze/homebrew-cask || true
 tap homebrew/versions || true
 tap caskroom/versions || true
+tap caskroom/cask
 tap yukidarake/homebrew-793 || true
 update || true
 
@@ -29,8 +29,8 @@ tap homebrew/dupes
 install homebrew/dupes/grep
 
 # other applications
-cask install keyremap4macbook || true
-cask install pckeyboardhack || true
+cask install karabiner || true
+cask install seil || true
 cask install virtualbox || true
 cask install vagrant || true
 cask install dropbox || true
