@@ -1,6 +1,6 @@
 tap homebrew/versions || true
 tap caskroom/versions || true
-tap caskroom/cask
+tap caskroom/cask || true
 tap yukidarake/homebrew-793 || true
 update || true
 
