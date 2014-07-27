@@ -1,10 +1,12 @@
 #!/bin/sh
 
-cli=/Applications/PCKeyboardHack.app/Contents/Library/bin/PCKeyboardHack_cli
+cli=/Applications/Seil.app/Contents/Library/bin/seil
 
 $cli set keycode_int8 76
 /bin/echo -n .
 $cli set keycode_lang6 76
+/bin/echo -n .
+$cli set keycode_ssapex_l4 111
 /bin/echo -n .
 $cli set enable_capslock 1
 /bin/echo -n .
@@ -36,9 +38,13 @@ $cli set enable_shift_l 0
 /bin/echo -n .
 $cli set enable_undo 0
 /bin/echo -n .
+$cli set enable_ssapex_upleft 0
+/bin/echo -n .
 $cli set keycode_jis_nfer 102
 /bin/echo -n .
 $cli set keycode_tab 48
+/bin/echo -n .
+$cli set keycode_ssapex_upright 111
 /bin/echo -n .
 $cli set enable_int2 0
 /bin/echo -n .
@@ -57,6 +63,8 @@ $cli set keycode_lang4 76
 $cli set enable_cut 0
 /bin/echo -n .
 $cli set keycode_command_r 54
+/bin/echo -n .
+$cli set keycode_ssapex_l1 111
 /bin/echo -n .
 $cli set enable_int9 0
 /bin/echo -n .
@@ -100,15 +108,23 @@ $cli set keycode_jis_kana 54
 /bin/echo -n .
 $cli set keycode_escape 53
 /bin/echo -n .
+$cli set enable_ssapex_upright 0
+/bin/echo -n .
 $cli set enable_lang2 0
 /bin/echo -n .
 $cli set enable_find 0
 /bin/echo -n .
-$cli set enable_jis_kana 0
+$cli set keycode_space 49
+/bin/echo -n .
+$cli set keycode_ssapex_l2 111
+/bin/echo -n .
+$cli set keycode_ssapex_upleft 111
 /bin/echo -n .
 $cli set keycode_shift_l 56
 /bin/echo -n .
 $cli set keycode_lang1 76
+/bin/echo -n .
+$cli set enable_jis_kana 0
 /bin/echo -n .
 $cli set keycode_control_r 62
 /bin/echo -n .
@@ -116,9 +132,13 @@ $cli set keycode_int7 76
 /bin/echo -n .
 $cli set enable_int8 0
 /bin/echo -n .
-$cli set keycode_capslock 62
+$cli set keycode_capslock 59
 /bin/echo -n .
 $cli set enable_option_r 0
+/bin/echo -n .
+$cli set enable_ssapex_l1 0
+/bin/echo -n .
+$cli set enable_space 0
 /bin/echo -n .
 $cli set enable_application 0
 /bin/echo -n .
@@ -142,9 +162,13 @@ $cli set keycode_option_r 61
 /bin/echo -n .
 $cli set keycode_execute 111
 /bin/echo -n .
+$cli set enable_ssapex_l2 0
+/bin/echo -n .
 $cli set keycode_int3 76
 /bin/echo -n .
 $cli set enable_lang7 0
+/bin/echo -n .
+$cli set keycode_ssapex_l3 111
 /bin/echo -n .
 $cli set enable_copy 0
 /bin/echo -n .
@@ -165,6 +189,8 @@ $cli set enable_shift_r 0
 $cli set keycode_int1 76
 /bin/echo -n .
 $cli set enable_lang5 0
+/bin/echo -n .
+$cli set enable_ssapex_l3 0
 /bin/echo -n .
 $cli set enable_command_r 0
 /bin/echo -n .
@@ -189,4 +215,6 @@ $cli set keycode_option_l 58
 $cli set enable_stop 0
 /bin/echo -n .
 $cli set keycode_copy 111
+/bin/echo -n .
+$cli set enable_ssapex_l4 0
 /bin/echo -n .
