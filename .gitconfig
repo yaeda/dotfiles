@@ -20,6 +20,7 @@
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
 	fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 	gr = grep --line-number --heading --break
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [branch]
 	autosetuprebase = always
 [merge]
