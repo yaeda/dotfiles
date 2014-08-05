@@ -77,7 +77,7 @@ ln -fs $HOME/dotfiles/atom $HOME/.atom
 # PCKeyboardHack setting
 #
 if [ `uname` = "Darwin" ]; then
-  sh $HOME/dotfiles/pckeyboardhack-import.sh
+  sh $HOME/dotfiles/seil-import.sh
 fi
 
 
