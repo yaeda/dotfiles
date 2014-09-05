@@ -11,6 +11,7 @@
   'normalizeIndentOnPaste': false
   'fontSize': 17
   'fontFamily': 'Ricty'
+  'showInvisibles': true
 'core':
   'themes': [
     'atom-dark-ui'
