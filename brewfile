@@ -39,7 +39,9 @@ cask install virtualbox || true
 cask install vagrant || true
 cask install dropbox || true
 cask install skype || true
-cask install sublime-text || true
+#cask install sublime-text || true
+cask install atom || true
+cask install macdown || true
 cask install yorufukurou || true
 cask install flip4mac || true
 #cask install divvy || true # install from AppStore
