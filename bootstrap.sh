@@ -4,8 +4,8 @@
 # Homebrew (MacOS)
 #
 if [ `uname` = "Darwin" ]; then
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  brew bundle
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  source brew.sh
 fi
 
 
