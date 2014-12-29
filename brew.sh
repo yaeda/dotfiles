@@ -44,7 +44,7 @@ brew cask install yorufukurou
 brew cask install flip4mac
 #brew cask install divvy # install from AppStore
 brew cask install google-chrome-canary
-brew cask install google-japanese-input
+brew cask install google-japanese-ime
 brew cask install caffeine
 
 brew linkapps
