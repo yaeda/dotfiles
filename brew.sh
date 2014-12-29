@@ -35,8 +35,6 @@ brew install homebrew/dupes/grep
 # other applications
 brew cask install karabiner
 brew cask install seil
-brew cask install virtualbox
-brew cask install vagrant
 brew cask install dropbox
 brew cask install skype
 #brew cask install sublime-text
