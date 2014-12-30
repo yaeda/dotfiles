@@ -26,6 +26,9 @@ brew install ruby-build
 brew install rbenv-gemset
 brew install rbenv-gem-rehash
 
+# node
+brew install nvm
+
 # brew install emacs --cocoa --HEAD --use-git-head
 
 # tmux powerline

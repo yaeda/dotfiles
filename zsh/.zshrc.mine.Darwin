@@ -8,3 +8,9 @@ alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 #
 #export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+#
+# Node
+#
+export NVM_DIR=$HOME/.nvm
+source $(brew --prefix nvm)/nvm.sh
