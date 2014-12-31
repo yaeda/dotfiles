@@ -1,27 +1,29 @@
-'exception-reporting':
-  'userId': '01593a1b-f2d9-836e-3c42-ee6ff4f53aa4'
-'release-notes':
-  'viewedVersion': '0.83.0'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '387459e5204d9134b3271e58ef10cc72f8fbb6b9'
-'editor':
-  'showIndentGuide': true
-  'normalizeIndentOnPaste': false
-  'fontSize': 17
-  'fontFamily': 'Ricty'
-  'showInvisibles': true
-'core':
-  'themes': [
-    'atom-dark-ui'
-    'solarized-dark-syntax'
-  ]
-  'ignoredNames': [
-    '.git'
-    '.svn'
-    '.DS_Store'
-  ]
-  'useReactEditor': true
-'autocomplete-plus':
-  'fileBlacklist': '.*'
+'global':
+  'exception-reporting':
+    'userId': '01593a1b-f2d9-836e-3c42-ee6ff4f53aa4'
+  'release-notes':
+    'viewedVersion': '0.83.0'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '387459e5204d9134b3271e58ef10cc72f8fbb6b9'
+  'editor':
+    'showIndentGuide': true
+    'normalizeIndentOnPaste': false
+    'fontSize': 17
+    'fontFamily': 'Ricty'
+    'showInvisibles': true
+    'invisibles': {}
+  'core':
+    'themes': [
+      'atom-dark-ui'
+      'solarized-dark-syntax'
+    ]
+    'ignoredNames': [
+      '.git'
+      '.svn'
+      '.DS_Store'
+    ]
+    'useReactEditor': true
+  'autocomplete-plus':
+    'fileBlacklist': '.*'
