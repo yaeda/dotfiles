@@ -34,6 +34,7 @@ brew install nvm
 # tmux powerline
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+brew install reattach-to-user-namespace
 
 # other applications
 brew cask install karabiner
