@@ -8,6 +8,10 @@ if [ `uname` = "Darwin" ]; then
   source brew.sh
 fi
 
+#
+# zsh as a login shell
+#
+chsh -s `which zsh`
 
 #
 # zsh (prezto)
@@ -88,5 +92,5 @@ fi
 # Ricty for powerline
 if [ `uname` = "Darwin" ]; then
   brew tap sanemat/font
-  brew install --powerline --vim-powerline --dz ricty
+  brew install --powerline --vim-powerline --dz --disable-visible-space ricty
 fi
