@@ -8,7 +8,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Node (nodebrew)
 #
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=/usr/local/var/nodebrew
 
 # alias
 alias usegmail='git config user.name "Takeshi YAEDA"; git config user.email t.yaeda@gmail.com'
