@@ -25,6 +25,6 @@
       "seti-syntax"
     ]
   "autocomplete-plus":
-    fileBlacklist: ".*"
+    confirmCompletion: "enter"
   linter: {}
   "tree-view": {}
