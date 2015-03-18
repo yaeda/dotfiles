@@ -82,6 +82,7 @@ ln -fs $HOME/dotfiles/atom $HOME/.atom
 #
 if [ `uname` = "Darwin" ]; then
   sh $HOME/dotfiles/seil-import.sh
+  sh $HOME/dotfiles/karabiner-import.sh
 fi
 
 
