@@ -21,8 +21,8 @@
       ".DS_Store"
     ]
     themes: [
-      "seti-ui"
-      "seti-syntax"
+      "one-dark-ui"
+      "one-dark-syntax"
     ]
   "autocomplete-plus":
     confirmCompletion: "enter"
