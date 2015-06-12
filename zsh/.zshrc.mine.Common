@@ -11,8 +11,16 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # alias
 alias usegmail='git config user.name "Takeshi YAEDA"; git config user.email t.yaeda@gmail.com'
-alias unproxy='unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY; apm config delete https-proxy;'
 alias bower='noglob bower'
+
+function un_proxy() {
+  unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY
+  npm config delete proxy
+  npm config delete registry
+  npm config delete strict-ssl
+  apm config delete https-proxy
+}
+alias unproxy=un_proxy
 
 function set_proxy() {
   if [ $# != 0 ]; then
@@ -20,6 +28,9 @@ function set_proxy() {
     export https_proxy=$1
     export HTTP_PROXY=$1
     export HTTPS_PROXY=$1
+    npm config set proxy $1
+    npm config set registry http://registry.npmjs.org/
+    npm config set strict-ssl false
     apm config set https-proxy $1
   else
     echo "$0: try '$0 protocol://proxyhost:port'"
