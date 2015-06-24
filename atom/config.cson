@@ -9,11 +9,11 @@
     userId: "387459e5204d9134b3271e58ef10cc72f8fbb6b9"
   editor:
     fontFamily: "Ricty"
-    fontSize: 17
     showInvisibles: true
     showIndentGuide: true
     useShadowDOM: true
     invisibles: {}
+    fontSize: 17
   core:
     ignoredNames: [
       ".git"
@@ -28,3 +28,5 @@
     confirmCompletion: "enter"
   linter: {}
   "tree-view": {}
+  tabs:
+    usePreviewTabs: true
