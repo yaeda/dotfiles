@@ -53,7 +53,7 @@ git clone git://github.com/erikw/tmux-powerline.git $HOME/.tmux/tmux-powerline
 #
 # other dotfiles
 #
-for dotfile in .tmux.conf .gitconfig .tmux-powerlinerc .gemrc
+for dotfile in .tmux.conf .gitconfig .tmux-powerlinerc .gemrc .npmrc
 do
     ln -fs $HOME/dotfiles/$dotfile $HOME/$dotfile
 done
