@@ -5,4 +5,6 @@ atom/packages/
 atom/storage/
 atom/compile-cache/
 atom/.node-gyp/
-.apm
+atom/blob-store/
+atom/.apm/
+atom/.apmrc
