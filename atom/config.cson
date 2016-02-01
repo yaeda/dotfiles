@@ -1,19 +1,6 @@
 "*":
-  "exception-reporting":
-    userId: "01593a1b-f2d9-836e-3c42-ee6ff4f53aa4"
-  "release-notes":
-    viewedVersion: "0.83.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "387459e5204d9134b3271e58ef10cc72f8fbb6b9"
-  editor:
-    fontFamily: "Ricty"
-    showInvisibles: true
-    showIndentGuide: true
-    useShadowDOM: true
-    invisibles: {}
-    fontSize: 17
+  "autocomplete-plus":
+    confirmCompletion: "enter"
   core:
     ignoredNames: [
       ".git"
@@ -24,10 +11,25 @@
       "one-dark-ui"
       "one-dark-syntax"
     ]
-  "autocomplete-plus":
-    confirmCompletion: "enter"
+  editor:
+    fontFamily: "Ricty"
+    fontSize: 17
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    useShadowDOM: true
+  "exception-reporting":
+    userId: "01593a1b-f2d9-836e-3c42-ee6ff4f53aa4"
   linter: {}
-  "tree-view": {}
+  metrics:
+    userId: "387459e5204d9134b3271e58ef10cc72f8fbb6b9"
+  react: {}
+  "release-notes":
+    viewedVersion: "0.83.0"
   tabs:
     usePreviewTabs: true
-  react: {}
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
