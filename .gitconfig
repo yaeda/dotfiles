@@ -5,7 +5,6 @@
 	ui = auto
 [core]
 	autocrlf = input
-	pager = diff-so-fancy | less --tabs=1,5 -R
 	editor = nano
 	excludesfile = ~/.gitignore
 [alias]
@@ -31,3 +30,6 @@
 	default = upstream
 [init]
 	templatedir = ~/.git_template
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
