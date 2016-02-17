@@ -47,7 +47,7 @@
 [pull]
 	rebase = true
 [push]
-	default = upstream
+	default = current
 [init]
 	templatedir = ~/.git_template
 [pager]
