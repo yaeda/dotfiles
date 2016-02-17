@@ -2,7 +2,27 @@
 	name = SET_ME_LOCALLY
 	email = SET_ME_LOCALLY
 [color]
-	ui = auto
+	ui = always
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = red
+[color "status"]
+	added = green
+	changed = red
+	untracked = cyan
 [core]
 	autocrlf = input
 	editor = nano
