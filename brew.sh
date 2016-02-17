@@ -15,6 +15,7 @@ brew install zsh
 brew install wget
 brew install curl
 brew install fasd
+brew install diff-so-fancy
 
 # python
 brew install pyenv
