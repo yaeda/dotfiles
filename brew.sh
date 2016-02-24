@@ -42,12 +42,10 @@ brew cask install karabiner
 brew cask install seil
 brew cask install dropbox
 brew cask install skype
-#brew cask install sublime-text
 brew cask install atom
-brew cask install macdown
 brew cask install yorufukurou
 brew cask install flip4mac
-#brew cask install divvy # install from AppStore
+brew cask install spectacle
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
 brew cask install caffeine
