@@ -28,9 +28,9 @@
 	editor = nano
 	excludesfile = ~/.gitignore
 [alias]
+	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 	st = status -sb
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	di = diff -w
 	br = branch -a
 	co = checkout
 	dm = diff master
@@ -40,6 +40,7 @@
 	fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
 	gr = grep --line-number --heading --break
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+	refresh= !git fetch origin && git remote prune origin
 [branch]
 	autosetuprebase = always
 [merge]
