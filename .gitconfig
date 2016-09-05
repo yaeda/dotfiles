@@ -54,5 +54,7 @@
 [pager]
 	diff = diff-so-fancy | less --tabs=4 -RFX
 	show = diff-so-fancy | less --tabs=4 -RFX
+[diff]
+	compactionHeuristic = true
 [include]
 	path = ~/.gitconfig.local
