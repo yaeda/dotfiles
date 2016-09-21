@@ -27,6 +27,7 @@
 	autocrlf = input
 	editor = nano
 	excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
 	st = status -sb
@@ -51,10 +52,9 @@
 	default = current
 [init]
 	templatedir = ~/.git_template
-[pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
 [diff]
 	compactionHeuristic = true
 [include]
 	path = ~/.gitconfig.local
+[help]
+	autocorrect = 1
