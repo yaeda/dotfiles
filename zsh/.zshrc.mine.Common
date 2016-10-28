@@ -20,7 +20,7 @@ function un_proxy() {
   npm config delete registry
   npm config delete strict-ssl
   apm config delete https-proxy
-  rm ~/.gradle/gradle.properties
+  rm -f ~/.gradle/gradle.properties
 }
 alias unproxy=un_proxy
 
@@ -34,7 +34,7 @@ function set_proxy() {
     npm config set registry http://registry.npmjs.org/
     npm config set strict-ssl false
     apm config set https-proxy $1
-    cp ~/.gradle/gradle.properties.proxy ~/.gradle/gradle.properties
+    cp -f ~/.gradle/gradle.properties.proxy ~/.gradle/gradle.properties
   else
     echo "$0: try '$0 protocol://proxyhost:port'"
   fi
