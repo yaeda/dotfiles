@@ -11,7 +11,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # alias
 alias usegmail='git config user.name "Takeshi YAEDA"; git config user.email t.yaeda@gmail.com'
-alias bower='noglob bower'
 alias adbscap='adb shell screencap -p /sdcard/screen.png; adb pull /sdcard/screen.png; adb shell rm /sdcard/screen.png'
 
 function un_proxy() {

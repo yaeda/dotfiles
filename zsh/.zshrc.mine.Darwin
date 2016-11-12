@@ -1,2 +1,2 @@
 # alias
-alias brewup="brew update && brew upgrade --all && brew cleanup && brew cask cleanup"
+alias brewup="brew update && brew upgrade && brew cleanup && brew cask cleanup"
