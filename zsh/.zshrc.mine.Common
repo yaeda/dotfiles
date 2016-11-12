@@ -33,7 +33,7 @@ function set_proxy() {
     npm config set registry http://registry.npmjs.org/
     npm config set strict-ssl false
     apm config set https-proxy $1
-    cp -f ~/.gradle/gradle.properties.proxy ~/.gradle/gradle.properties
+    \cp -f ~/.gradle/gradle.properties.proxy ~/.gradle/gradle.properties
   else
     echo "$0: try '$0 protocol://proxyhost:port'"
   fi
