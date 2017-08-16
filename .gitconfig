@@ -1,6 +1,5 @@
 [user]
-	name = SET_ME_LOCALLY
-	email = SET_ME_LOCALLY
+	useConfigOnly = true
 [color]
 	ui = always
 [color "diff"]

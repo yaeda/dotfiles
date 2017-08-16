@@ -1,10 +1,9 @@
 brew update
-brew upgrade --all
+brew upgrade
 
 brew tap homebrew/versions
 brew tap caskroom/versions
 brew tap caskroom/cask
-brew tap yukidarake/homebrew-793
 brew update || true
 
 brew install brew-cask
@@ -17,39 +16,23 @@ brew install curl
 brew install fasd
 brew install diff-so-fancy
 
-# python
-brew install pyenv
-brew install pyenv-virtualenv
-
-# ruby
-brew install rbenv
-brew install ruby-build
-brew install rbenv-gemset
-brew install rbenv-gem-rehash
-
 # node
-brew install nvm
+brew install nodebrew
 
 # brew install emacs --cocoa --HEAD --use-git-head
 
-# tmux powerline
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-brew install reattach-to-user-namespace
-
+#
 # other applications
-brew cask install karabiner
-brew cask install seil
+#
+brew cask install karabiner-elements
 brew cask install dropbox
-brew cask install skype
-brew cask install atom
-brew cask install yorufukurou
-brew cask install flip4mac
-brew cask install spectacle
+#brew cask install atom
+brew cask install visual-studio-code
+brew cask install night-owl
+#brew cask install spectacle
 brew cask install google-chrome-canary
 brew cask install google-japanese-ime
 brew cask install caffeine
-
-brew linkapps
+brwe cask install slack
 
 brew cleanup
