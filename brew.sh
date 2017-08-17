@@ -10,7 +10,7 @@ brew install brew-cask
 brew install git
 brew install tig
 brew install tmux
-brew install zsh
+brew install fish
 brew install wget
 brew install curl
 brew install fasd

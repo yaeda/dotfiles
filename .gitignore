@@ -8,3 +8,9 @@
 .atom/blob-store/
 .atom/.apm/
 .atom/.apmrc
+
+# fish
+fishd*
+**/fish/completions/
+**/fish/functions/
+**/fish/conf.d/
