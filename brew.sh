@@ -15,6 +15,7 @@ brew install wget
 brew install curl
 brew install fasd
 brew install diff-so-fancy
+brew install icdiff
 
 # node
 brew install nodebrew
