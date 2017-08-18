@@ -35,7 +35,7 @@
 	co = checkout
 	dm = diff master
 	df = diff -w
-	idf = !git difftool --no-prompt --extcmd icdiff
+	idf = "!f(){ git difftool --no-prompt --extcmd icdiff $@ | less -RFX; }; f"
 	su = submodule update
 	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
 	fetch-pulls = fetch origin +refs/pull/*:refs/remotes/pull/*
