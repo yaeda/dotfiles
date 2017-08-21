@@ -12,10 +12,24 @@ function brewup
     command brew doctor
 end
 
+function allup
+    brewup
+    if type -q fisher
+        fisher up
+    end
+    if type -q nodebrew
+        command nodebrew selfupdate
+    end
+    if type -q npm
+        command npm update -g npm
+        command npm update -g
+    end
+end
+
 function set_proxy --argument-names proxy_host proxy_port
     un_proxy
     if test (count $argv) -eq 2
-        echo "set proxy as $proxy_host:$proxy_port"
+        set_color brgreen; echo -e "\t✔ set proxy as $proxy_host:$proxy_port"
 
         set -gx http_proxy $proxy_host:$proxy_port
         set -gx https_proxy $proxy_host:$proxy_port
@@ -41,7 +55,7 @@ function set_proxy --argument-names proxy_host proxy_port
 end
 
 function un_proxy
-    echo "reset proxy"
+    set_color brgreen; echo -e "\t✔ reset proxy"
     set -ge http_proxy
     set -ge https_proxy
     set -ge HTTP_PROXY
