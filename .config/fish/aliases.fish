@@ -29,7 +29,7 @@ end
 function set_proxy --argument-names proxy_host proxy_port
     un_proxy
     if test (count $argv) -eq 2
-        set_color brgreen; echo -e "\t✔ set proxy as $proxy_host:$proxy_port"
+        set_color brgreen; echo -e "\t✔ set proxy as $proxy_host:$proxy_port"; set_color normal
 
         set -gx http_proxy $proxy_host:$proxy_port
         set -gx https_proxy $proxy_host:$proxy_port
@@ -55,7 +55,8 @@ function set_proxy --argument-names proxy_host proxy_port
 end
 
 function un_proxy
-    set_color brgreen; echo -e "\t✔ reset proxy"
+    set_color brgreen; echo -e "\t✔ reset proxy"; set_color normal
+
     set -ge http_proxy
     set -ge https_proxy
     set -ge HTTP_PROXY
@@ -78,6 +79,11 @@ function un_proxy
     if test -e $gradle_property
         command sed -i '' -E "/^systemProp.http.proxy(Host|Port).*\$/d" $gradle_property
     end
+end
+
+function get_ip
+    echo (ifconfig en0 | sed -n -E 's/^.*inet ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+).*$/\1/p')
+    # ip addr show en0
 end
 
 function adbscap
