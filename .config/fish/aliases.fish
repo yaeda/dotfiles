@@ -35,6 +35,10 @@ function set_proxy --argument-names proxy_host proxy_port
         set -gx https_proxy $proxy_host:$proxy_port
         set -gx HTTP_PROXY $proxy_host:$proxy_port
         set -gx HTTPS_PROXY $proxy_host:$proxy_port
+        if type -q git
+            command git config --global http.proxy $proxy_host:$proxy_port
+            command git config --global https.proxy $proxy_host:$proxy_port
+        end
         if type -q npm
             command npm config set proxy $proxy_host:$proxy_port
             command npm config set registry http://registry.npmjs.org/
@@ -51,6 +55,12 @@ function set_proxy --argument-names proxy_host proxy_port
             echo "systemProp.http.proxyHost=$proxy_host" >> $gradle_property
             echo "systemProp.http.proxyPort=$proxy_port" >> $gradle_property
         end
+        set -l processing_config $HOME/Library/Processing/preferences.txt
+        if test -e $processing_config
+            set -l proxy_host_without_protocol (string split :// $proxy_host)[-1]
+            command sed -i '' -E "s:(proxy.(http|https|socks).host=):\1$proxy_host_without_protocol:g" $processing_config
+            command sed -i '' -E "s:(proxy.(http|https|socks).port=):\1$proxy_port:g" $processing_config
+        end
     end
 end
 
@@ -61,6 +71,10 @@ function un_proxy
     set -ge https_proxy
     set -ge HTTP_PROXY
     set -ge HTTPS_PROXY
+    if type -q git
+        command git config --global --unset http.proxy
+        command git config --global --unset https.proxy
+    end
     if type -q npm
         command npm config delete proxy
         command npm config delete registry
@@ -78,6 +92,11 @@ function un_proxy
     set -l gradle_property $HOME/.gradle/gradle.properties
     if test -e $gradle_property
         command sed -i '' -E "/^systemProp.http.proxy(Host|Port).*\$/d" $gradle_property
+    end
+    set -l processing_config $HOME/Library/Processing/preferences.txt
+    if test -e $processing_config
+        command sed -i '' -E 's/(proxy.(http|https|socks).host=).*/\1/g' $processing_config
+        command sed -i '' -E 's/(proxy.(http|https|socks).port=).*/\1/g' $processing_config
     end
 end
 
