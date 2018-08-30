@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Dracula</key>
@@ -225,6 +227,18 @@
 	<string>8F0D811B-BFC1-42A1-845D-4C32576208CD</string>
 	<key>DimOnlyText</key>
 	<false/>
+	<key>EnableDivisionView</key>
+	<true/>
+	<key>Hotkey</key>
+	<true/>
+	<key>HotkeyChar</key>
+	<integer>32</integer>
+	<key>HotkeyCode</key>
+	<integer>49</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
+	<key>HotkeyModifiers</key>
+	<integer>524288</integer>
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -250,7 +264,7 @@
 	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
 	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
 	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
-	DIAIgAlRMSNAdCGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
 	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
 	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
 	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
@@ -271,14 +285,16 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>318 1298 620 392 -332 800 1920 1057 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>214 189 796 473 0 0 1440 877 </string>
+	<string>433 393 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 475 570 402 0 0 1440 877 </string>
+	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 115 570 402 0 0 1440 877 </string>
+	<string>326 242 570 402 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -539,6 +555,8 @@
 			</dict>
 			<key>Guid</key>
 			<string>8F0D811B-BFC1-42A1-845D-4C32576208CD</string>
+			<key>Hide After Opening</key>
+			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -898,6 +916,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -938,6 +958,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>524151598.40284902</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -973,6 +995,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>~/dotfiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -982,7 +1006,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-08-17T12:36:43Z</date>
+	<date>2017-12-04T01:33:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -994,7 +1018,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.0.15</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
