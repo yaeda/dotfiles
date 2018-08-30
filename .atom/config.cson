@@ -1,18 +1,20 @@
 "*":
+  "atom-ide-ui":
+    "atom-ide-outline-view": {}
   "autocomplete-plus":
     confirmCompletion: "enter"
   core:
+    disabledPackages: [
+      "file-icons"
+    ]
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
     ]
-    themes: [
-      "one-dark-ui"
-      "one-dark-syntax"
-    ]
+    telemetryConsent: "no"
   editor:
-    fontFamily: "Ricty"
+    fontFamily: "Ricty Diminished Discord"
     fontSize: 17
     invisibles: {}
     showIndentGuide: true
