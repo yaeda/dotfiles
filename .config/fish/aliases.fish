@@ -17,6 +17,9 @@ function allup
     if type -q fisher
         fisher up
     end
+    if type -q fish_update_completions
+        fish_update_completions
+    end
     if type -q nodebrew
         command nodebrew selfupdate
     end
