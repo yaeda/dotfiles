@@ -5,9 +5,8 @@ end
 
 function brewup
     command brew -v update
-    command brew upgrade --force-bottole --cleanup
+    command brew upgrade --force-bottle --cleanup
     command brew cleanup
-    command brew cask cleanup
     command brew prune
     command brew doctor
 end
