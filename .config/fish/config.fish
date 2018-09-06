@@ -1,8 +1,8 @@
-. ~/.config/fish/aliases.fish
+source ~/.config/fish/aliases.fish
 
 # local config
 if test -e ~/.local_config.fish
-    . ~/.local_config.fish
+    source ~/.local_config.fish
 end
 
 # env

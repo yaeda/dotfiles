@@ -34,7 +34,9 @@ end
 function set_proxy --argument-names proxy_host proxy_port
     un_proxy
     if test (count $argv) -eq 2
-        set_color brgreen; echo -e "\t✔ set proxy as $proxy_host:$proxy_port"; set_color normal
+        set_color brgreen
+        echo -e "\t✔ set proxy as $proxy_host:$proxy_port"
+        set_color normal
 
         set -gx http_proxy $proxy_host:$proxy_port
         set -gx https_proxy $proxy_host:$proxy_port
@@ -53,12 +55,12 @@ function set_proxy --argument-names proxy_host proxy_port
             command apm config set https-proxy $proxy_host:$proxy_port
         end
         if type -q curl
-            echo "proxy = \"$proxy_host:$proxy_port\"" >> $HOME/.curlrc
+            echo "proxy = \"$proxy_host:$proxy_port\"" >>$HOME/.curlrc
         end
         set -l gradle_property $HOME/.gradle/gradle.properties
         if test -e $gradle_property
-            echo "systemProp.http.proxyHost=$proxy_host" >> $gradle_property
-            echo "systemProp.http.proxyPort=$proxy_port" >> $gradle_property
+            echo "systemProp.http.proxyHost=$proxy_host" >>$gradle_property
+            echo "systemProp.http.proxyPort=$proxy_port" >>$gradle_property
         end
         set -l processing_config $HOME/Library/Processing/preferences.txt
         if test -e $processing_config
@@ -70,7 +72,9 @@ function set_proxy --argument-names proxy_host proxy_port
 end
 
 function un_proxy
-    set_color brgreen; echo -e "\t✔ reset proxy"; set_color normal
+    set_color brgreen
+    echo -e "\t✔ reset proxy"
+    set_color normal
 
     set -ge http_proxy
     set -ge https_proxy
