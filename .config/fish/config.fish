@@ -6,4 +6,4 @@ if test -e ~/.local_config.fish
 end
 
 # env
-set fish_user_pathes $HOME/.nodebrew/current/bin
+set fish_user_paths $HOME/.nodebrew/current/bin
