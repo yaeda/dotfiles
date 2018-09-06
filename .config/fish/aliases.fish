@@ -13,6 +13,9 @@ end
 
 function allup
     brewup
+    if type -q mas
+        mas upgrade
+    end
     if type -q fisher
         fisher up
     end
