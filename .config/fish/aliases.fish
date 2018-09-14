@@ -58,6 +58,14 @@ function set_proxy --argument-names proxy_host proxy_port
         if type -q curl
             echo "proxy = \"$proxy_host:$proxy_port\"" >>$HOME/.curlrc
         end
+        set -l ssh_config $HOME/.ssh/config
+        set -l ssh_config_proxy $HOME/.ssh/config.proxy
+        if test ! -e $ssh_config
+            command touch $ssh_config
+        end
+        if test -e $ssh_config_proxy
+            echo "Include config.proxy" >>$ssh_config
+        end
         set -l gradle_property $HOME/.gradle/gradle.properties
         if test -e $gradle_property
             echo "systemProp.http.proxyHost=$proxy_host" >>$gradle_property
@@ -98,6 +106,10 @@ function un_proxy
         command sed -i '' -E "/^proxy.*\$/d" $curlrc
         #              |   `- sed(BSD) uses -E option as regexp script. sed(GNU) uses -r
         #              `-- sed(BSD) -i requires extension. Empty means overwrite
+    end
+    set -l ssh_config $HOME/.ssh/config
+    if test -e $ssh_config
+        command sed -i '' -E "/^Include config.proxy/d" $ssh_config
     end
     set -l gradle_property $HOME/.gradle/gradle.properties
     if test -e $gradle_property
