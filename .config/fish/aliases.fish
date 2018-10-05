@@ -39,10 +39,10 @@ function set_proxy --argument-names proxy_host proxy_port
         echo -e "\t✔ set proxy as $proxy_host:$proxy_port"
         set_color normal
 
-        set -gx http_proxy $proxy_host:$proxy_port
-        set -gx https_proxy $proxy_host:$proxy_port
-        set -gx HTTP_PROXY $proxy_host:$proxy_port
-        set -gx HTTPS_PROXY $proxy_host:$proxy_port
+        set -Ux http_proxy $proxy_host:$proxy_port
+        set -Ux https_proxy $proxy_host:$proxy_port
+        set -Ux HTTP_PROXY $proxy_host:$proxy_port
+        set -Ux HTTPS_PROXY $proxy_host:$proxy_port
         if type -q git
             command git config --global http.proxy $proxy_host:$proxy_port
             command git config --global https.proxy $proxy_host:$proxy_port
@@ -85,10 +85,10 @@ function un_proxy
     echo -e "\t✔ reset proxy"
     set_color normal
 
-    set -ge http_proxy
-    set -ge https_proxy
-    set -ge HTTP_PROXY
-    set -ge HTTPS_PROXY
+    set -Ue http_proxy
+    set -Ue https_proxy
+    set -Ue HTTP_PROXY
+    set -Ue HTTPS_PROXY
     if type -q git
         command git config --global --unset http.proxy
         command git config --global --unset https.proxy
