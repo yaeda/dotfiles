@@ -13,11 +13,23 @@ function brewup
 end
 
 function allup
-    brewup
+    if type -q brew
+        set_color brgreen
+        echo ">>> homebrew"
+        set_color normal
+        brewup
+    end
     if type -q mas
+        set_color brgreen
+        echo ">>> mas"
+        set_color normal
         mas upgrade
     end
     if type -q fisher
+        set_color brgreen
+        echo ">>> fisher"
+        set_color normal
+        echo "current" (fisher version)
         fisher self-update
         fisher
     end
@@ -25,9 +37,15 @@ function allup
         fish_update_completions
     end
     if type -q nodebrew
+        set_color brgreen
+        echo ">>> nodebrew"
+        set_color normal
         command nodebrew selfupdate
     end
     if type -q npm
+        set_color brgreen
+        echo ">>> npm"
+        set_color normal
         command npm update -g npm
         command npm update -g
     end
