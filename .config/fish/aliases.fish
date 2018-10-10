@@ -18,7 +18,8 @@ function allup
         mas upgrade
     end
     if type -q fisher
-        fisher up
+        fisher self-update
+        fisher
     end
     if type -q fish_update_completions
         fish_update_completions
