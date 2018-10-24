@@ -1,6 +1,6 @@
 function usegmail
     command git config user.email "t.yaeda@gmail.com"
-    command git config user.name "Takeshi YAEDA"
+    command git config user.name "Takeshi Yaeda"
     command git config core.sshCommand "ssh -i $HOME/.ssh/id_rsa_github_tyaeda_gmail_com"
 end
 
