@@ -152,3 +152,11 @@ function adbscap
     command adb pull $path
     command adb shell rm $path
 end
+
+function lsdsstore
+    command find . -name ".DS_Store" -print
+end
+
+function rmdsstore
+    command find . -name ".DS_Store" -delete
+end
