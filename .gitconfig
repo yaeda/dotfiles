@@ -1,7 +1,7 @@
 [user]
 	useConfigOnly = true
 [color]
-	ui = always
+	ui = auto
 [color "diff"]
 	meta = yellow bold
 	commit = green bold
