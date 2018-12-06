@@ -58,6 +58,8 @@ function set_proxy --argument-names proxy_host proxy_port
         echo -e "\t✔ set proxy as $proxy_host:$proxy_port"
         set_color normal
 
+        set -l proxy_host_without_protocol (string split :// $proxy_host)[-1]
+
         set -Ux http_proxy $proxy_host:$proxy_port
         set -Ux https_proxy $proxy_host:$proxy_port
         set -Ux HTTP_PROXY $proxy_host:$proxy_port
@@ -87,12 +89,13 @@ function set_proxy --argument-names proxy_host proxy_port
         end
         set -l gradle_property $HOME/.gradle/gradle.properties
         if test -e $gradle_property
-            echo "systemProp.http.proxyHost=$proxy_host" >>$gradle_property
+            echo "systemProp.http.proxyHost=$proxy_host_without_protocol" >>$gradle_property
             echo "systemProp.http.proxyPort=$proxy_port" >>$gradle_property
+            echo "systemProp.https.proxyHost=$proxy_host_without_protocol" >>$gradle_property
+            echo "systemProp.https.proxyPort=$proxy_port" >>$gradle_property
         end
         set -l processing_config $HOME/Library/Processing/preferences.txt
         if test -e $processing_config
-            set -l proxy_host_without_protocol (string split :// $proxy_host)[-1]
             command sed -i '' -E "s:(proxy.(http|https|socks).host=):\1$proxy_host_without_protocol:g" $processing_config
             command sed -i '' -E "s:(proxy.(http|https|socks).port=):\1$proxy_port:g" $processing_config
         end
@@ -132,7 +135,7 @@ function un_proxy
     end
     set -l gradle_property $HOME/.gradle/gradle.properties
     if test -e $gradle_property
-        command sed -i '' -E "/^systemProp.http.proxy(Host|Port).*\$/d" $gradle_property
+        command sed -i '' -E "/^systemProp.https{0,1}.proxy(Host|Port).*\$/d" $gradle_property
     end
     set -l processing_config $HOME/Library/Processing/preferences.txt
     if test -e $processing_config
