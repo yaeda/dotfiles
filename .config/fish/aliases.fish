@@ -6,9 +6,8 @@ end
 
 function brewup
     command brew -v update
-    command brew upgrade --force-bottle --cleanup
+    command env HOMEBREW_INSTALL_CLEANUP=1 brew upgrade --force-bottle
     command brew cleanup
-    command brew prune
     command brew doctor
 end
 
