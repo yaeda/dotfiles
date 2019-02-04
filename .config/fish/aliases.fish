@@ -28,7 +28,7 @@ function allup
         set_color brgreen
         echo ">>> fisher"
         set_color normal
-        echo "current" (fisher version)
+        echo "current" (fisher --version)
         fisher self-update
         fisher
     end
