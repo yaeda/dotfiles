@@ -102,10 +102,6 @@ function set_proxy --argument-names proxy_host proxy_port
 end
 
 function un_proxy
-    set_color brgreen
-    echo -e "\t✔ reset proxy"
-    set_color normal
-
     set -Ue http_proxy
     set -Ue https_proxy
     set -Ue HTTP_PROXY
@@ -141,6 +137,10 @@ function un_proxy
         command sed -i '' -E 's/(proxy.(http|https|socks).host=).*/\1/g' $processing_config
         command sed -i '' -E 's/(proxy.(http|https|socks).port=).*/\1/g' $processing_config
     end
+
+    set_color brgreen
+    echo -e "\t✔ reset proxy"
+    set_color normal
 end
 
 function get_ip
