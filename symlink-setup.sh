@@ -143,7 +143,7 @@ print_success() {
 
 # finds all .dotfiles in this folder
 declare -a FILES_TO_SYMLINK=$(find . -type f -maxdepth 1 -name ".*" -not -name .DS_Store -not -name .git -not -name .gitignore | sed -e 's|//|/|' | sed -e 's|./.|.|')
-FILES_TO_SYMLINK="$FILES_TO_SYMLINK .atom .config/fish"
+FILES_TO_SYMLINK="$FILES_TO_SYMLINK .config/fish .config/karabiner .config/phoenix"
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
