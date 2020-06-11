@@ -90,6 +90,20 @@ class PrefixKey {
 
 const prefix = new PrefixKey("d", ["cmd"]);
 
+prefix.addSuffix("a", ["cmd"], (count) => {
+  const screen = Screen.main().flippedVisibleFrame();
+  const window = Window.focused();
+
+  if (window) {
+    window.setFrame({
+      x: 0,
+      y: 0,
+      width: screen.width,
+      height: screen.height,
+    });
+  }
+});
+
 prefix.addSuffix("b", ["cmd"], (count) => {
   const screen = Screen.main().flippedVisibleFrame();
   const window = Window.focused();
@@ -134,6 +148,109 @@ prefix.addSuffix("f", ["cmd"], (count) => {
       y: 0,
       width: width,
       height: screen.height,
+    });
+  }
+});
+
+prefix.addSuffix("b", ["cmd", "ctrl"], (count) => {
+  const screen = Screen.main().flippedVisibleFrame();
+  const window = Window.focused();
+
+  if (window) {
+    const reverseIndex =
+      WIDTH_LIST_SIDE.length - (count % WIDTH_LIST_SIDE.length) - 1;
+    const width = screen.width * WIDTH_LIST_SIDE[reverseIndex];
+
+    window.setFrame({
+      x: 0,
+      y: 0,
+      width: width,
+      height: screen.height,
+    });
+  }
+});
+
+prefix.addSuffix("l", ["cmd", "ctrl"], (count) => {
+  const screen = Screen.main().flippedVisibleFrame();
+  const window = Window.focused();
+
+  if (window) {
+    const reverseIndex =
+      WIDTH_LIST_CENTER.length - (count % WIDTH_LIST_CENTER.length) - 1;
+    const width = screen.width * WIDTH_LIST_CENTER[reverseIndex];
+
+    window.setFrame({
+      x: (screen.width - width) / 2,
+      y: 0,
+      width: width,
+      height: screen.height,
+    });
+  }
+});
+
+prefix.addSuffix("f", ["cmd", "ctrl"], (count) => {
+  const screen = Screen.main().flippedVisibleFrame();
+  const window = Window.focused();
+
+  if (window) {
+    const reverseIndex =
+      WIDTH_LIST_SIDE.length - (count % WIDTH_LIST_SIDE.length) - 1;
+    const width = screen.width * WIDTH_LIST_SIDE[reverseIndex];
+
+    window.setFrame({
+      x: screen.width - width,
+      y: 0,
+      width: width,
+      height: screen.height,
+    });
+  }
+});
+
+prefix.addSuffix("l", [], () => {
+  const APP_ID_TODO = "com.microsoft.to-do-mac";
+  const APP_ID_SLACK = "com.tinyspeck.slackmacgap";
+  const APP_ID_CHROME = "com.google.Chrome.canary";
+  const APP_ID_TARGETS = [APP_ID_TODO, APP_ID_SLACK, APP_ID_CHROME];
+  const TARGET_FRAMES = {
+    [APP_ID_TODO]: {
+      x: 0.03,
+      y: 0.125,
+      width: 0.2,
+      height: 0.75,
+    },
+    [APP_ID_CHROME]: {
+      x: 0.25,
+      y: 0.125,
+      width: 0.35,
+      height: 0.75,
+    },
+    [APP_ID_SLACK]: {
+      x: 0.62,
+      y: 0.125,
+      width: 0.35,
+      height: 0.75,
+    },
+  };
+
+  const screen = Screen.main().flippedVisibleFrame();
+  const windows = Screen.main().windows();
+  if (windows) {
+    const targetWindows = [];
+    windows.forEach((window) => {
+      const id = window.app().bundleIdentifier();
+      if (window.isVisible() && APP_ID_TARGETS.includes(id)) {
+        targetWindows.push({ id: id, window: window });
+      }
+    });
+
+    targetWindows.forEach((target) => {
+      const frame = TARGET_FRAMES[target.id];
+      target.window.setFrame({
+        x: screen.width * frame.x,
+        y: screen.height * frame.y,
+        width: screen.width * frame.width,
+        height: screen.height * frame.height,
+      });
     });
   }
 });
