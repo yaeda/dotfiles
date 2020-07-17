@@ -7,6 +7,7 @@ end
 function brewup
     command brew -v update
     command env HOMEBREW_INSTALL_CLEANUP=1 brew upgrade --force-bottle
+    command brew cask upgrade
     command brew cleanup
     command brew doctor
     command brew bundle dump --force --global --describe
