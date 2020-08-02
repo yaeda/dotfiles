@@ -50,8 +50,6 @@
 	rebase = true
 [push]
 	default = current
-[init]
-	templatedir = ~/.git_template
 [diff]
 	compactionHeuristic = true
 [include]
