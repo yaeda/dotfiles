@@ -213,7 +213,7 @@ prefix.addSuffix("l", [], () => {
   const APP_ID_TARGETS = [APP_ID_TODO, APP_ID_SLACK, APP_ID_CHROME];
   const TARGET_FRAMES = {
     [APP_ID_TODO]: {
-      x: 0.03,
+      x: 0.04,
       y: 0.125,
       width: 0.2,
       height: 0.75,
@@ -225,7 +225,7 @@ prefix.addSuffix("l", [], () => {
       height: 0.75,
     },
     [APP_ID_SLACK]: {
-      x: 0.62,
+      x: 0.61,
       y: 0.125,
       width: 0.35,
       height: 0.75,
