@@ -50,12 +50,6 @@ function allup
         command npm update -g npm
         command npm update -g
     end
-    if type -q ipm
-        set_color brgreen
-        echo ">>> ipm"
-        set_color normal
-        command ipm update
-    end
 end
 
 function set_proxy --argument-names proxy_host proxy_port
