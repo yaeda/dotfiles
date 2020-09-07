@@ -1,4 +1,6 @@
-source ~/.config/fish/aliases.fish
+if test -e ~/.config/fish/aliases.fish
+    source ~/.config/fish/aliases.fish
+end
 
 # local config
 if test -e ~/.local_config.fish
