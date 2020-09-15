@@ -25,7 +25,6 @@
 [core]
 	autocrlf = input
 	editor = nano
-	excludesfile = ~/.gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	alias = !git config --get-regexp '^alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
