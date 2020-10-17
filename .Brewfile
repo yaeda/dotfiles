@@ -31,6 +31,8 @@ brew "git"
 brew "git-delta"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Install and debug iPhone apps from the command-line
+brew "ios-deploy"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Mac App Store command-line interface
