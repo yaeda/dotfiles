@@ -31,8 +31,7 @@ function allup
         echo ">>> fisher"
         set_color normal
         echo "current" (fisher --version)
-        fisher self-update
-        fisher
+        fisher update
     end
     if type -q fish_update_completions
         fish_update_completions
