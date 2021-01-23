@@ -11,8 +11,6 @@ brew "bat"
 brew "cloc"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
-# Easiest way to build and release mobile apps
-brew "fastlane"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Play, record, convert, and stream audio and video
