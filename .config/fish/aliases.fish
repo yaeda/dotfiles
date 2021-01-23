@@ -163,3 +163,7 @@ end
 function rmdsstore
     command find . -name ".DS_Store" -delete
 end
+
+function x
+    command arch -x86_64 $argv
+end
