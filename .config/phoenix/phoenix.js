@@ -209,7 +209,8 @@ prefix.addSuffix("f", ["cmd", "ctrl"], (count) => {
 prefix.addSuffix("l", [], () => {
   const APP_ID_TODO = "com.microsoft.to-do-mac";
   const APP_ID_SLACK = "com.tinyspeck.slackmacgap";
-  const APP_ID_CHROME = "com.google.Chrome.canary";
+  const APP_ID_CHROME = "com.google.Chrome";
+  const APP_ID_CHROME_CANARY = "com.google.Chrome.canary";
   const APP_ID_TARGETS = [APP_ID_TODO, APP_ID_SLACK, APP_ID_CHROME];
   const TARGET_FRAMES = {
     [APP_ID_TODO]: {
@@ -219,6 +220,12 @@ prefix.addSuffix("l", [], () => {
       height: 0.75,
     },
     [APP_ID_CHROME]: {
+      x: 0.25,
+      y: 0.125,
+      width: 0.35,
+      height: 0.75,
+    },
+    [APP_ID_CHROME_CANARY]: {
       x: 0.25,
       y: 0.125,
       width: 0.35,
