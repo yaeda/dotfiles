@@ -262,4 +262,21 @@ prefix.addSuffix("l", [], () => {
   }
 });
 
+const showWindowBundleIdentifier = () => {
+  const windows = Screen.main().windows();
+  if (windows) {
+    windows.forEach((window) => {
+      if (window.isVisible()) {
+        Phoenix.notify(
+          `${window.app().name()} / ${window.app().bundleIdentifier()}`
+        );
+      }
+    });
+  }
+};
+
+// prefix.addSuffix("s", ["cmd"], () => {
+//   showWindowBundleIdentifier();
+// });
+
 Phoenix.notify("Phoenix config loaded");
