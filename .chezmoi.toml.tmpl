@@ -1,4 +1,4 @@
-{{- @sourceDir := promptStringOnce . "sourceDir" "Target Directory" -}}
+{{- $sourceDir := promptStringOnce . "sourceDir" "Target Directory" -}}
 
 sourceDir = {{ $sourceDir | quote }}
 encryption = "age"
