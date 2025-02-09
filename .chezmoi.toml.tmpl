@@ -1,8 +1,12 @@
-sourceDir = {{ .chezmoi.config.sourceDir | quote }}
+{{- @sourceDir := promptStringOnce . "sourceDir" "Target Directory" -}}
+
+sourceDir = {{ $sourceDir | quote }}
 encryption = "age"
+
 [edit]
     command = "code"
     args = ["--wait"]
+
 [age]
     identity = "~/.keystore/dotfiles.key"
     recipient = "age1aksqt32nw6w64jy23ly9rphxxl0m4k49m5gg4vnd86mdvhzngysq8uf479"
