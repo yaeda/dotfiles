@@ -1,6 +1,3 @@
-{{- $sourceDir := promptStringOnce . "sourceDir" "Target Directory" -}}
-
-sourceDir = {{ $sourceDir | quote }}
 encryption = "age"
 
 [edit]
