@@ -1,0 +1,10 @@
+#!/bin/sh
+
+CONFIG_PATH="${HOME}/.config/chezmoi"
+KEY_PATH="${CONFIG_PATH}/dotfiles.key"
+
+if [ ! -f $KEY_PATH ]; then
+    mkdir -p $CONFIG_PATH
+    chezmoi age decrypt --output $KEY_PATH --passphrase "{{ .chezmoi.sourceDir }}/dotfiles.key.age"
+    chmod 600 $KEY_PATH
+fi
